@@ -41,22 +41,22 @@ h1 {
     align-items: center;
     position: absolute;
     backface-visibility: hidden;
-    overflow: hidden;
-    transition: transform 0.5s;
+    transition: all 0.5s;
     transform-style: preserve-3d;
     cursor: pointer;
-}
-
-
-.card.flipped {
-    transform: rotateY(180deg);
 }
 
 .back {
     transform: rotateY(180deg);
 }
 
+.backflip {
+    transform: rotateY(0deg);
+}
 
+.frontflip {
+    transform: rotateY(-180deg);
+}
 
 .card img {
     height: 100px;
@@ -64,13 +64,12 @@ h1 {
 }
 
 
-
 @media (max-width: 767px) {
     h1 {
         font-size: 36px;
     }
     
-    .cards {
+    .game {
         display: block;
     }
 }
